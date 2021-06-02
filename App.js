@@ -54,7 +54,7 @@ export default function App() {
               headerRight: () => (
                 <Button
                   onPress={() => alert("Clicked !!")}
-                  title="menu"
+                  title="logout"
                   color="#000"
                 />
               ),
