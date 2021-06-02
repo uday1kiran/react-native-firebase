@@ -53,9 +53,12 @@ export default function App() {
             options={{
               headerRight: () => (
                 <Button
-                  onPress={() => alert("Clicked !!")}
+                  onPress={() => {
+                    firebase.auth().signOut();
+                    setUser(null);
+                  }}
                   title="logout"
-                  color="#000"
+                  color="#FFA087"
                 />
               ),
             }}
