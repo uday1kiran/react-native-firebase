@@ -6,6 +6,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { LoginScreen, HomeScreen, RegistrationScreen } from "./src/screens";
 import { decode, encode } from "base-64";
+import CoinCreate from "./src/screens/HomeScreen/CoinCreate";
+
 if (!global.btoa) {
   global.btoa = encode;
 }
@@ -63,7 +65,7 @@ export default function App() {
               ),
             }}
           >
-            {(props) => <HomeScreen {...props} extraData={user} />}
+            {(props) => <CoinCreate {...props} extraData={user} />}
           </Stack.Screen>
         ) : (
           <>
